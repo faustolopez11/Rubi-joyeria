@@ -1,0 +1,350 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #202124;
+}
+
+/* Contenedor principal */
+.home-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Header */
+/* Estilos para el header y el mensaje de bienvenida */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 280px;
+  height: 64px;
+  background-color: #526D82 !important;
+  z-index: 1000;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-icon {
+  color: #e0e0e0;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.welcome-message {
+  color: #f8f9fa;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background-color: #27374D;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  /* box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1); */
+}
+
+.menu {
+  list-style: none;
+  padding: 8px 0;
+  margin-top: 64px;
+  flex-grow: 1;
+}
+
+.menu li {
+  margin: 2px 0;
+}
+
+.menu a, .logout-button {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 48px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 8%;
+}
+
+.menu a:hover, .logout-button:hover {
+  background-color: #f5f9ff;
+  color: #1F1B1C;
+}
+
+.menu a.active, .logout-button:active {
+  background-color: #e8f0fe;
+  color: #1F1B1C;
+}
+
+.menu a::before, .logout-button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #1a73e8;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.menu a:hover::before, .menu a.active::before,
+.logout-button:hover::before, .logout-button:active::before {
+  opacity: 1;
+}
+
+.menu-icon, .logout-button svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  color: #5f6368;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover .menu-icon, .menu a.active .menu-icon,
+.logout-button:hover svg, .logout-button:active svg {
+  color: #1F1B1C;
+}
+
+/* Contenedor del botón de logout */
+.logout-button-container {
+  padding: 8px 0;
+}
+
+/* Área de contenido principal */
+.content {
+  flex: 1;
+  margin-left: 280px;
+  margin-top: 64px;
+  padding: 24px;
+  background-color: #ffffff;
+  min-height: calc(100vh - 64px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 72px;
+      
+  }
+
+  .menu a span, .logout-button span {
+      display: none;
+  }
+
+  .menu a, .logout-button {
+      justify-content: center;
+      padding: 0;
+  }
+
+  .menu-icon, .logout-button svg {
+      margin: 0;
+  }
+
+  .header {
+      left: 72px;
+  }
+
+  .content {
+      margin-left: 72px;
+  }
+}
+
+/* Animaciones */
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.menu li, .logout-button-container {
+  animation: slideIn 0.3s ease forwards;
+  animation-delay: calc(var(--item-index) * 0.05s);
+}
+
+/* Estilos para el scroll */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #1a73e8;
+}
+
+/* Estilos para los estados activos y focus */
+.menu a:focus, .logout-button:focus {
+  outline: none;
+  background-color: #e8f0fe;
+}
+
+/* Transiciones suaves para todos los elementos interactivos */
+.menu a, .logout-button, .menu-icon {
+  transition: all 0.2s ease-in-out;
+}
+/* Compatibilidad con Bootstrap sin afectar estilos propios */
+.container, .row, .col, .form-control, .btn {
+font-family: inherit; /* Mantener coherencia tipográfica */
+}
+
+/* Evitar sobrescribir estilos propios 
+.navbar, .sidebar, .btn {
+border-radius: 8px !important;
+} */
+
+/* Mejoras en formularios */
+input, select, .btn {
+padding: 10px 12px;
+font-size: 16px;
+}
+
+/* Asegurar colores personalizados */
+.bg-light {
+background-color: #f8f9fa !important;
+}
+/* Header */
+.header {
+position: fixed;
+top: 0;
+right: 0;
+left: 280px;
+height: 64px;
+background-color: #ffffff;
+z-index: 1000;
+padding: 0 24px;
+display: flex;
+align-items: center;
+justify-content: space-between; /* Ahora el botón se alinea correctamente */
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del Bienvenido y el ícono de usuario */
+.header-left {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+/* Botón para cambiar de tema */
+.theme-toggle {
+background: none;
+border: none;
+cursor: pointer;
+font-size: 20px;
+color: #5f6368;
+transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+color: #1a73e8;
+}
+
+/* ====== MODO OSCURO ====== */
+body.dark-mode {
+background-color: #121212;
+color: #ffffff;
+}
+
+/* Sidebar en modo oscuro */
+.dark-mode .sidebar {
+background-color: #1e1e1e;
+color: #ffffff;
+}
+
+.dark-mode .sidebar a {
+color: #c5c5c5;
+}
+
+.dark-mode .sidebar a:hover {
+background-color: #333;
+color: #ffffff;
+}
+
+/* Header en modo oscuro */
+.dark-mode .header {
+background-color: #1e1e1e;
+color: #ffffff;
+}
+
+/* Botón de cambio de tema en modo oscuro */
+.dark-mode .theme-toggle {
+color: #ffffff;
+}
+
+/* Solucionar fondo blanco en modo oscuro */
+.dark-mode .content {
+background-color: #121212;
+}
+
+/* Botón de logout en modo oscuro */
+.dark-mode .logout-button {
+background-color: #721c24;
+color: white;
+}
+
+.dark-mode .logout-button:hover {
+background-color: #a71d2a;
+}
+
+.page-container .home-container{
+  margin-left: 250px;
+}
+.custom-btn {
+  background-color: #526D82 !important;
+  border-color: #9DB2BF !important;
+  color: white !important;
+}
+
+.custom-btn:hover {
+  background-color: #7C98A3 !important;
+  border-color: #7C98A3 !important;
+  color: white !important;
+}
+
+
+  

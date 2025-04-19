@@ -1,0 +1,34 @@
+/* Contenedor general del Navbar */
+.navbar-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo del Navbar */
+.navbar-content {
+    background-color: #526D82; /* Fondo claro, puedes cambiarlo */
+    padding: 10px 0;
+}
+
+/* Enlaces del Navbar */
+.navbar-content .nav-link {
+    color: #ffff; /* Color de texto de los enlaces */
+    font-weight: bold;
+}
+
+.navbar-content .nav-link:hover {
+    color: #27374D !important; /* Color al pasar el mouse */
+}
+
+/* Botón de cerrar sesión */
+.navbar-content .btn-outline-dark {
+    border-color: #ffff;
+    color: #fff;
+}
+
+.navbar-content .btn-outline-dark:hover {
+    background-color: #fff;
+    color: #27374D;
+}

@@ -1,0 +1,156 @@
+/* Contenedor general del botón flotante */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+/* Botón principal (botón con check o "X") */
+.fab-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    background-color: #6d2932; /* Cambiá este color si querés otro color principal */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Menú de opciones que aparece arriba del botón */
+.fab-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+/* Botones secundarios del menú (con íconos) */
+.fab-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+/* Etiquetas al lado de los botones (como "Cancelar venta", etc.) */
+.fab-option span {
+    background-color: #444;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Estilos individuales por botón (cambiá estos colores cuando quieras) */
+.btn-historial {
+    background-color: #28a745; /* Verde */
+}
+
+.btn-cambio {
+    background-color: #17a2b8; /* Celeste */
+}
+
+/* Estilo común para todos los botones del menú */
+.fab-option button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+/* Estilo para mostrar secciones completas cuando se abre historial o cambios */
+.pantalla-completa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(157, 53, 53);
+    z-index: 1100;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+/* Botón de cancelar dentro de pantalla completa */
+.boton-cancelar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1101;
+    background-color: #dc3545; /* rojo */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.pantalla-completa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 1050;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Botón flotante personalizable */
+.fab-btn {
+    background-color: var(--fab-color, #007bff) !important;
+    color: white;
+}
+/* Menú desplegable flotante arriba del botón */
+.fab-menu {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.fab-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.btn-historial,
+.btn-cambio {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.btn-historial {
+    background-color: var(--historial-color, #28a745); /* verde por default */
+}
+
+.btn-cambio {
+    background-color: var(--cambio-color, #ffc107); /* amarillo por default */
+}

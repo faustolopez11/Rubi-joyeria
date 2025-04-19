@@ -1,0 +1,68 @@
+.ventas-container {
+  padding: 2rem;
+}
+
+/* Título principal */
+.ventas-container h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Nueva clase para ancho del input de búsqueda */
+.busqueda-input-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto 1.5rem auto;
+}
+
+.busqueda-input {
+  min-width: 600px;
+  font-size: 16px;
+  padding: 12px;
+}
+
+/* Tabla de búsqueda */
+.ventas-container .table-striped {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Tabla de detalle */
+.ventas-container .table-bordered {
+  margin-top: 1.5rem;
+}
+
+/* Total de la venta */
+.ventas-container h4 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+/* Botón Confirmar */
+.ventas-container .btn-primary {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.busqueda-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.input-busqueda {
+  min-width: 1000px !important;
+  font-size: 16px !important;
+  padding: 12px !important;
+  flex: 1 !important;
+}
+.text-center{
+  color: rgb(10, 10, 10);
+}
+.letra-venta{
+  color: rgb(5, 5, 5);
+}
+.letra-pago{
+  color: rgb(6, 6, 6);
+}

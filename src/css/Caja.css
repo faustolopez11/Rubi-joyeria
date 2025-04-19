@@ -1,0 +1,157 @@
+.caja-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .resumen-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .box.ingreso {
+    background: #28a745;
+    border-bottom: 5px solid #1e7e34;
+  }
+  
+  .box.egreso {
+    background: #dc3545;
+    border-bottom: 5px solid #a71d2a;
+  }
+  
+  .box.saldo {
+    background: #007bff;
+    border-bottom: 5px solid #0056b3;
+  }
+  
+  .box h4 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .acciones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .acciones input {
+    padding: 8px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .acciones button {
+    white-space: nowrap;
+  }
+  
+  .tablas {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* CONTENEDOR GENERAL DE CADA TABLA */
+  .tabla {
+    flex: 1;
+    min-width: 400px;
+    max-height: 500px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* TÍTULO DE CADA TABLA */
+  .tabla h5 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  /* SCROLL INTERNO EN EL CUERPO DE LA TABLA */
+  .tabla-scroll {
+    overflow-y: auto;
+    max-height: 400px;
+  }
+  
+  /* TABLA ESTÁNDAR */
+  .tabla table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  /* ENCABEZADOS STICKY */
+  .tabla thead {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1;
+  }
+  
+  .tabla th,
+  .tabla td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  /* FILA FINAL CON TOTALES */
+  .total-fila {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .fondo-ingresos {
+    background-color: #d4edda;
+  }
+  
+  .fondo-egresos {
+    background-color: #f8d7da;
+  }
+  
+  /* ESTILO PARA SCROLL BONITO */
+  .tabla-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  .tabla-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+  .tabla-scroll::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 8px;
+  }
+  .tabla-scroll::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .resumen-boxes,
+    .tablas,
+    .acciones {
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,28 @@
+.stock-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stock-title {
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.stock-table th {
+    text-align: center;
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+.stock-table td {
+    text-align: center;
+    font-size: 16px;
+    vertical-align: middle;
+}

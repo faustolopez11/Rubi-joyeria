@@ -1,0 +1,115 @@
+/* 📌 Contenedor general */
+#proveedores-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 📌 Tabla */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    text-align: left;
+}
+
+/* 📌 Formulario */
+.proveedores-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* 📌 Botón flotante */
+.fab-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #526D82;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.fab-button:hover {
+    background-color: #DDE6ED;
+}
+/* 📌 Ajustar el tamaño del formulario */
+.proveedores-form {
+    background: #fff;
+    padding: 30px;  /* Más espacio interno */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;  /* Aumentar el ancho */
+    min-height: 500px;  /* Aumentar la altura */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 📌 Asegurar que los campos sean más grandes */
+.proveedores-form .form-control {
+    height: 50px;
+    font-size: 18px;
+}
+
+/* 📌 Espaciado entre los elementos del formulario */
+.proveedores-form .mb-2 {
+    margin-bottom: 20px;
+}
+
+/* 📌 Hacer los botones más grandes */
+.proveedores-form button {
+    font-size: 18px;
+    padding: 10px 15px;
+}
+/* 📌 Botón Editar */
+.btn-editar {
+    background-color: #9DB2BF!important; /* Amarillo Bootstrap */
+    color: #212529 !important; /* Texto oscuro */
+    border: none !important;
+    padding: 8px 12px !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    transition: background 0.3s ease-in-out !important;
+}
+
+.btn-editar:hover {
+    background-color: #292724 !important; /* Amarillo más oscuro */
+    color: #fff !important;
+}
+
+/* 📌 Botón Eliminar */
+.btn-eliminar {
+    background-color: #736f6f !important; /* Rojo Bootstrap */
+    color: white !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    transition: background 0.3s ease-in-out !important;
+}
+
+.btn-eliminar:hover {
+    background-color: #526D82 !important; /* Rojo más oscuro */
+}
+.proveedores-titulo {
+    color: #080808;
+}
