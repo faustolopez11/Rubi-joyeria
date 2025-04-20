@@ -2,9 +2,7 @@
 
 Proyecto final de la Tecnicatura Universitaria en Programación de la UTN-FRT.
 Desarrollado con mis compañeros:
-Micaelamedina23
-GonzaloJuncos
-matias22lucena
+Micaelamedina23, GonzaloJuncos, matias22lucena
 
 Este proyecto fue desarrollado utilizando **React** y **Vite**, con una configuración mínima para trabajar con HMR (Hot Module Replacement) y reglas de ESLint.
 
